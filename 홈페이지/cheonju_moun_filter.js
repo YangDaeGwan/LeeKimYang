@@ -19,32 +19,19 @@ var mountain = [
     {id : 16, local : 서원구, title : '학천산' }
   ]
 
-  function layout(items){
-    items.forEach(item => {
-      let template =`
-      <div class="moun">
-        <img src="https://via.placeholder.com/300"></img>
-        <div class="moun-body">
-          <h5 class="title">${item.title}</h5>
-          <h5 class="local">지역 : ${item.local}</h5>
-          <p class="height">높이 : ${item.height}</p>
-          <button class="btn">세부사항</button>
-        </div>
-      </div>
-      `
-      $('#items').append(template)
-    });
+
+  function filterObjects(c){
+    var x, i;
+    x = document.getElementsByClassName("box");
+    if (c == "all") c = "";
+    for(i = 0; i < x.length; i++) {
+      removeClass(x[i], "show");
+      if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+    }
   }
 
-  $('#high').click(function(){
-    let mountainHeight = mountain.slice();
-    mountainHeight.sort(function(item1,item2){
-      return item1.height-item2.height;
-    });
-
-    $('#items').html('');
-
-    layout(mountainHeight);
-    $('.height').css('background','#FFFF9A');
-  })
+  function addClass(element, name){
+    var i, ar1, arr2;
+    arr1 = element.className.Split(" ");
+  }
 
