@@ -26,4 +26,3 @@
 ## 설치 방법
 '야너여'는 git clone https://github.com/YangDaeGwan/LeeKimYang.git 을 통해 개인 기기에 내려 받아 웹으로 접속하여 사용할 수 있습니다.
 
-<>
